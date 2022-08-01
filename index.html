@@ -31,11 +31,21 @@
 
       /* Write CSS Here */
 
-      .three-column-grid {
+      .logo {
+        border: dotted 1px blue;
+      }
+      .two-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 5px;
       }
 
-      .three-column-grid__expand-two {
+      .three-column-grid {
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
       }
+
+      
 
       .five-column-grid {
       }
@@ -50,7 +60,44 @@
       /* Practice re-using classes */
 
       .two-column-grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
       }
+      .two-column-grid .box1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .two-column-grid .box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      
+
+      /* .box {
+        display: grid;
+        grid-template-columns: 50px;
+      } */
+      .inner-box{
+        display:grid;
+        grid-template-columns: 50px;
+      }
+
+      .lastcontainer {
+        display: grid;
+        grid-template-columns: 100px 1fr 300px;
+      }
+
+      .box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      
+
+     
+
     </style>
   </head>
   <body>
@@ -96,7 +143,7 @@
     <div>
       <h2>Grid within Grid #1</h2>
       <div class="container two-column-grid">
-        <div class="box">
+        <div class="box1">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
@@ -112,7 +159,7 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="lastcontainer">
         <div class="box">
           <div class="inner-box"></div>
         </div>
